@@ -9,6 +9,7 @@ class LoadVentanaPrincipal(QtWidgets.QMainWindow):
         self.showMaximized()
         # Hacer referencia al item del menu
         self.actionSalir.triggered.connect(self.cerrarVentana)
+        self.actionSalir.triggered.connect(self.cerrarVentana)
 
     def cerrarVentana(self):
         self.close()
