@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>771</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* ---- Estilo General (Opcional, pero recomendado) ---- */
+QWidget {
+    font-family: &quot;Segoe UI&quot;, &quot;Cantarell&quot;, &quot;Helvetica Neue&quot;, sans-serif;
+    font-size: 10pt;
+}
+
+/* ---- QMenuBar (Barra de Menú Superior) ---- */
+QMenuBar {
+    background-color: #303030; /* Fondo oscuro */
+    color: #E0E0E0; /* Texto claro */
+    spacing: 4px;
+    padding: 3px 5px;
+    border-bottom: 1px solid #202020; /* Borde sutil */
+}
+
+QMenuBar::item {
+    padding: 6px 10px;
+    background-color: transparent;
+    border-radius: 4px;
+}
+
+QMenuBar::item:selected { /* Cuando el menú está abierto */
+    background-color: #454545; /* Fondo más claro */
+}
+
+QMenuBar::item:pressed { /* Al hacer clic */
+    background-color: #007ACC; /* Acento azul brillante */
+    color: white;
+}
+
+QMenuBar::item:disabled {
+    color: #707070; /* Texto deshabilitado */
+}
+
+
+/* ---- QMenu (Menú Desplegable) ---- */
+QMenu {
+    background-color: #3C3C3C; /* Fondo del menú */
+    color: #E0E0E0;
+    border: 1px solid #202020; /* Borde nítido */
+    border-radius: 5px;
+    padding: 5px;
+    margin: 2px;
+}
+
+QMenu::item {
+    padding: 6px 25px;
+    margin: 2px 4px;
+    border-radius: 4px;
+    background-color: transparent;
+}
+
+QMenu::item:selected { /* Hover o selección */
+    background-color: #007ACC; /* Acento azul */
+    color: white;
+}
+
+QMenu::item:disabled {
+    color: #707070;
+    background-color: transparent;
+}
+
+/* Separador en el menú */
+QMenu::separator {
+    height: 1px;
+    background: #505050;
+    margin: 5px 0px;
+}
+
+/* Iconos y checks en el menú */
+QMenu::icon {
+    padding-left: 5px;
+}
+
+QMenu::indicator { /* Para QAction con checkable=true */
+    width: 14px;
+    height: 14px;
+    padding-left: 6px;
+}
+
+
+/* ---- QStatusBar (Barra de Estado Inferior) ---- */
+QStatusBar {
+    background-color: #303030; /* Coincide con la barra de menú */
+    color: #B0B0B0; /* Texto un poco más atenuado */
+    border-top: 1px solid #202020; /* Borde sutil */
+    padding: 4px;
+}
+
+QStatusBar::item {
+    border: none;
+    margin: 0px 4px;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>771</width>
+     <height>36</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuModelos">
+    <property name="title">
+     <string>Modelos</string>
+    </property>
+    <addaction name="actionBasicos"/>
+    <addaction name="actionLangChain"/>
+    <addaction name="separator"/>
+    <addaction name="actionSalir"/>
+   </widget>
+   <addaction name="menuModelos"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionBasicos">
+   <property name="text">
+    <string>Basicos</string>
+   </property>
+  </action>
+  <action name="actionLangChain">
+   <property name="text">
+    <string>LangChain</string>
+   </property>
+  </action>
+  <action name="actionSalir">
+   <property name="text">
+    <string>Salir</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
