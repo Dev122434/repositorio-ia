@@ -434,79 +434,99 @@ QToolTip {
             </layout>
            </widget>
            <widget class="QWidget" name="page_memoria">
-            <widget class="QStackedWidget" name="stackedWidget_2">
+            <widget class="QPushButton" name="boton_enviar_memoria">
              <property name="geometry">
               <rect>
                <x>0</x>
-               <y>0</y>
-               <width>311</width>
-               <height>429</height>
+               <y>70</y>
+               <width>291</width>
+               <height>36</height>
               </rect>
              </property>
-             <widget class="QWidget" name="page_prompt_2">
-              <layout class="QVBoxLayout" name="verticalLayout_5">
-               <item>
-                <widget class="QLabel" name="label_3">
-                 <property name="text">
-                  <string>Escriba el prompt para el historial</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QLineEdit" name="input_prompt_2"/>
-               </item>
-               <item>
-                <widget class="QPushButton" name="boton_enviar_2">
-                 <property name="text">
-                  <string>Enviar</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QTextEdit" name="output_response_2"/>
-               </item>
-              </layout>
-             </widget>
-             <widget class="QWidget" name="page_memoria_2"/>
-             <widget class="QWidget" name="page_chat_2"/>
+             <property name="text">
+              <string>Enviar</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_3">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>4</y>
+               <width>291</width>
+               <height>20</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>Escriba el prompt</string>
+             </property>
+            </widget>
+            <widget class="QTextEdit" name="output_response_memoria">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>112</y>
+               <width>291</width>
+               <height>301</height>
+              </rect>
+             </property>
+            </widget>
+            <widget class="QLineEdit" name="input_prompt_memoria">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>30</y>
+               <width>291</width>
+               <height>31</height>
+              </rect>
+             </property>
             </widget>
            </widget>
            <widget class="QWidget" name="page_chat">
-            <widget class="QStackedWidget" name="stackedWidget_3">
+            <widget class="QPushButton" name="boton_enviar_4">
              <property name="geometry">
               <rect>
-               <x>10</x>
-               <y>0</y>
-               <width>276</width>
-               <height>320</height>
+               <x>0</x>
+               <y>70</y>
+               <width>291</width>
+               <height>36</height>
               </rect>
              </property>
-             <widget class="QWidget" name="page_prompt_4">
-              <layout class="QVBoxLayout" name="verticalLayout_7">
-               <item>
-                <widget class="QLabel" name="label_5">
-                 <property name="text">
-                  <string>Escriba el prompt para el chat</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QLineEdit" name="input_prompt_4"/>
-               </item>
-               <item>
-                <widget class="QPushButton" name="boton_enviar_4">
-                 <property name="text">
-                  <string>Enviar</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QTextEdit" name="output_response_4"/>
-               </item>
-              </layout>
-             </widget>
-             <widget class="QWidget" name="page_memoria_4"/>
-             <widget class="QWidget" name="page_chat_4"/>
+             <property name="text">
+              <string>Enviar</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_5">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>4</y>
+               <width>291</width>
+               <height>20</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>Escriba el prompt</string>
+             </property>
+            </widget>
+            <widget class="QTextEdit" name="output_response_4">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>112</y>
+               <width>291</width>
+               <height>301</height>
+              </rect>
+             </property>
+            </widget>
+            <widget class="QLineEdit" name="input_prompt_4">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>30</y>
+               <width>291</width>
+               <height>34</height>
+              </rect>
+             </property>
             </widget>
            </widget>
           </widget>

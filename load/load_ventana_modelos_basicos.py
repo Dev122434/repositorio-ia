@@ -1,6 +1,8 @@
 from PyQt5 import QtWidgets, uic, QtCore
 from PyQt5.QtCore import QPropertyAnimation
 
+from load.form.memoria import Memoria
+
 class LoadVentanaModelosBasicos(QtWidgets.QDialog):
     def __init__(self):
         super().__init__()
@@ -22,7 +24,9 @@ class LoadVentanaModelosBasicos(QtWidgets.QDialog):
 
         #Botones para cambiar de página
         self.boton_prompt.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.page_prompt))
+        self.boton_enviar.clicked.connect(self.obtener_entrada)
         self.boton_memoria.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.page_memoria))
+        self.boton_enviar_memoria.clicked.connect(self.pagina_memoria)
         self.boton_chat.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.page_chat))
 
     # 6.- mover ventana
@@ -67,3 +71,12 @@ class LoadVentanaModelosBasicos(QtWidgets.QDialog):
             self.animacionb.setEndValue(extender)
             self.animacionb.setEasingCurve(QtCore.QEasingCurve.InOutQuart)
             self.animacionb.start()
+    
+    def obtener_entrada(self):
+        input_user = self.input_prompt.text()
+        print(input_user)
+        pass
+
+    def pagina_memoria(self):
+        memoria = Memoria()
+        memoria.obtener_entrada()
