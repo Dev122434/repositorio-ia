@@ -3,18 +3,12 @@ class ModeloHistorial:
     def __init__(self):
         pass
 
-    def modelo_historial(self, historial):
+    def modelo_historial(self, historial, pregunta):
         cliente = OpenAI(api_key='')
         historial: list = [{
             "role": "system",
             "content": "Eres un asistente util y amigable"
         }]
-
-        while True:
-            pregunta = input('Tu: ')
-
-            if pregunta.lower() == 'salir':
-                break
 
         historial.append({"role": 'user', 'content': pregunta})
 
