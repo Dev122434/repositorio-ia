@@ -347,16 +347,23 @@ QToolTip {
         </property>
         <layout class="QVBoxLayout" name="verticalLayout_2">
          <item>
-          <widget class="QPushButton" name="btn_page_2">
+          <widget class="QPushButton" name="boton_prompt">
+           <property name="text">
+            <string>Prompt</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="boton_memoria">
            <property name="text">
             <string>Ejercicio 2</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QPushButton" name="btn_page_3">
+          <widget class="QPushButton" name="boton_chat">
            <property name="text">
-            <string>Ejercicio 3</string>
+            <string>Chat</string>
            </property>
           </widget>
          </item>
@@ -402,18 +409,8 @@ QToolTip {
          </property>
          <item>
           <widget class="QStackedWidget" name="stackedWidget">
-           <widget class="QWidget" name="page_2">
+           <widget class="QWidget" name="page_prompt">
             <layout class="QVBoxLayout" name="verticalLayout_4">
-             <item>
-              <widget class="QLabel" name="label_6">
-               <property name="text">
-                <string>Proporciona un contexto o rol a la IA</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QLineEdit" name="input_context"/>
-             </item>
              <item>
               <widget class="QLabel" name="label_2">
                <property name="text">
@@ -454,7 +451,7 @@ QToolTip {
             </layout>
            </widget>
            <widget class="QWidget" name="page_memoria">
-            <widget class="QPushButton" name="btn_enviar">
+            <widget class="QPushButton" name="boton_enviar_memoria">
              <property name="geometry">
               <rect>
                <x>0</x>

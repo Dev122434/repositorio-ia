@@ -24,7 +24,7 @@ def modelo(tema: str):
     # Crear el prompt
     prompt = PromptTemplate(
         input_variables=["tema"],
-        template="Explícale a un estudiante universitario el tema {tema}."
+        template="{tema}."
     )
 
     # Nueva forma (con tubería)

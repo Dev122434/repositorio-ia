@@ -23,9 +23,9 @@ class LoadVentanaLangchain(QtWidgets.QDialog):
         self.boton_menu.clicked.connect(self.mover_menu)
 
         #Botones para cambiar de página
-        self.boton_page1.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.page1))
+        self.btn_page_2.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.page_2))
 
-        self.boton_enviar.clicked.connect(self.input_response)
+        self.btn_enviar.clicked.connect(self.exercise_2)
 
     # 6.- mover ventana
     def mousePressEvent(self, event):
@@ -73,4 +73,12 @@ class LoadVentanaLangchain(QtWidgets.QDialog):
     def input_response(self):
         tema = self.input_prompt.text()
         content = modelo( tema )
+        self.output_response.setPlainText( content )
+
+    def exercise_2(self):
+        contexto = self.input_context.text()
+        text = self.input_texto.text()
+        idioma = self.input_idioma.text()
+        content = sequientialchain(contexto, idioma, text)
+        print('Procesando tu respuesta.... ')
         self.output_response.setPlainText( content )
