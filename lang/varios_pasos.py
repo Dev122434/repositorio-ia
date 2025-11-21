@@ -25,5 +25,9 @@ def varios_pasos(contexto: str, idioma: str, input: str):
 
     chain = prompt_resumen | llm | prompt_traduccion | llm | StrOutputParser()
 
-    resultado = chain.invoke(input)
+    resultado = chain.invoke({
+        "contexto": contexto,
+        "idioma": idioma,
+        "input": input
+    })
     return resultado

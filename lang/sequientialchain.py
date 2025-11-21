@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 import os
 import logging
 
-def sequientialchain(contexto, idioma, input):
+def sequientialchain(contexto: str, idioma: str, input: str):
     # Silenciar logs
     os.environ["GRPC_VERBOSITY"] = "NONE"
     os.environ["GRPC_CPP_VERBOSITY"] = "NONE"
@@ -30,7 +30,11 @@ def sequientialchain(contexto, idioma, input):
     chain_final = chain_resumen | chain_traduccion
 
     # Ejecutar (se pasa texto directamente, no diccionario)
-    resultado = chain_final.invoke(contexto, idioma, input)
+    resultado = chain_final.invoke({
+        "contexto": contexto,
+        "idioma": idioma,
+        "input": input
+    })
 
     # Extraer texto limpio
     texto_final = resultado.content if hasattr(resultado, "content") else str(resultado)

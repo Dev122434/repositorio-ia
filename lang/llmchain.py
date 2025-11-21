@@ -25,6 +25,7 @@ def modelo(tema: str):
     prompt = PromptTemplate(
         input_variables=["tema"],
         template="{tema}."
+        
     )
 
     # Nueva forma (con tubería)

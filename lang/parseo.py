@@ -32,6 +32,9 @@ def parseo(contexto: str, input: str):
     chain = prompt | llm | parser
 
     # Ejecutar
-    resultado = chain.invoke(contexto, input)
+    resultado = chain.invoke({
+        "contexto": contexto, 
+        "input": input
+    })
 
     return resultado

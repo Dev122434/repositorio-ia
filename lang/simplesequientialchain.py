@@ -26,7 +26,11 @@ def simplesequientialchain(contexto, idioma, input):
     chain = prompt_resumen | llm | prompt_traduccion | llm
 
     # Ejecutar pasando directamente texto (no diccionario)
-    resultado = chain.invoke(contexto, idioma, input)
+    resultado = chain.invoke({
+        "contexto": contexto,
+        "idioma": idioma,
+        "input": input
+    })
 
     # Obtener texto limpio
     texto_final = resultado.content if hasattr(resultado, "content") else str(resultado)
